@@ -25,6 +25,41 @@ scrape_configs:
     static_configs:
       - targets: ['cadvisor:8080']
 
+  - job_name: 'user'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['user:80']
+
+  - job_name: 'front-end'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['front-end:80']
+  
+  - job_name: 'catalogue'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['catalogue:80']
+  
+  - job_name: 'payment'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['payment:80']
+  
+  - job_name: 'carts'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['carts:80']
+  
+  - job_name: 'orders'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['orders:80']
+  
+  - job_name: 'shipping'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['shipping:80']
+  
   - job_name: 'prometheus'
     scrape_interval: 10s
     static_configs:
